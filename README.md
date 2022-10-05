@@ -8,6 +8,6 @@
 - JavaScript
 
 ![image](https://user-images.githubusercontent.com/23384348/193817346-6a2592f8-b22d-4ae2-842b-54a33a16870a.png)
-![image](https://user-images.githubusercontent.com/23384348/193817568-4aeff50b-036c-40e6-9b59-b2370a1aeb74.png)
+![image](https://user-images.githubusercontent.com/23384348/194142775-6c3bb6d7-8f3f-4e36-929a-30728673483b.png)
 
 
