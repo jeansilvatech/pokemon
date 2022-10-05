@@ -6,15 +6,25 @@ const prev = document.querySelector('.prev');
 
 const url = 'https://pokeapi.co/api/v2/pokemon/'
 let id = 0
-    
+function getImage(){
+    if(id<10){
+        image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`
+    }else if(id>=10 && id<100){
+        image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id}.png`
+    }else if(id>=100){
+        image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
+    }
+}
     next.addEventListener('click', ()=>{
+        
             id += 1
+            console.log(id)
            fetch(`${url}${id}`)
             .then((response)=>{
                 return response.json();
-            }).then((data)=>{
-                namePokemon.innerHTML = data.name;
-                image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+            }).then( async(data)=>{
+                namePokemon.innerHTML = await data.name;
+                getImage();
                 idPokemon.innerHTML = id;
             }) 
 
@@ -27,7 +37,7 @@ let id = 0
                 return response.json();
             }).then((data)=>{
                 namePokemon.innerHTML = data.name;
-                image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+                getImage();
                 idPokemon.innerHTML = id;
             }) 
 
