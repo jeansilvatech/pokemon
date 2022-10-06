@@ -114,6 +114,11 @@ header .container{
     background-color: rgba(255,255,255, 0.5);
     color: #1c1c1c;
 }
+span{
+    color: #1c1c1c;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
 .container .image{
     width: 200px;
     height: 200px; 
@@ -131,8 +136,7 @@ form input{
 }
 input:focus,
 input:active,
-input:hover
-{
+input:hover{
     outline: none;
     background-color: rgba(255, 255, 255, 0.8);
     color: #1c1c1c;
