@@ -13,6 +13,7 @@ const pokeApi = async(id)=>{
     const data = await pokeResponse.json();
     return data;
 }
+
 function getImage(id){
     if(id<10){
         image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`
@@ -35,13 +36,16 @@ form.addEventListener('submit', (event)=>{
     console.log(input.value)
     input.value = ''
 })
-    next.addEventListener('click', ()=>{
+
+next.addEventListener('click', ()=>{
             id += 1
             renderPokemon(id)
         })      
 
-        prev.addEventListener('click', ()=>{
+prev.addEventListener('click', ()=>{
             id -= 1
+            if(id<=0){
+                id=1
+            }
             renderPokemon(id)
         })  
-       

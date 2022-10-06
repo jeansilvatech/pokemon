@@ -130,7 +130,9 @@ form input{
     border: 1px solid transparent;
 }
 input:focus,
-input:active{
+input:active,
+input:hover
+{
     outline: none;
     background-color: rgba(255, 255, 255, 0.8);
     color: #1c1c1c;
