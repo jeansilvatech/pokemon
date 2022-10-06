@@ -54,51 +54,51 @@ function bgCard(typePokemon){
         break;
         case 'electric':
             card.style.backgroundColor = '#FFD700'
-            card.style.backgroundColor = '#EEE8AA'
+            header.style.backgroundColor = '#EEE8AA'
         break;
         case 'ground':
             card.style.backgroundColor = '#F0E68C'
-            card.style.backgroundColor = '#F5F5DC'
+            header.style.backgroundColor = '#F5F5DC'
         break;
         case 'fairy':
             card.style.backgroundColor = '#EE82EE'
-            card.style.backgroundColor = '#DDA0DD'
+            header.style.backgroundColor = '#DDA0DD'
         break;
         case 'fighting':
             card.style.backgroundColor = '#d56723'
-            card.style.backgroundColor = '#F4A460'
+            header.style.backgroundColor = '#F4A460'
         break;
         case 'psychic':
             card.style.backgroundColor = '#FF69B4'
-            card.style.backgroundColor = '#FFB6C1'
+            header.style.backgroundColor = '#FFB6C1'
         break;
         case 'rock':
             card.style.backgroundColor = '#a38c21'
-            card.style.backgroundColor = '#BDB76B'
+            header.style.backgroundColor = '#BDB76B'
         break;
         case 'ghost':
             card.style.backgroundColor = '#7b62a3'
-            card.style.backgroundColor = '#E6E6FA'
+            header.style.backgroundColor = '#E6E6FA'
         break;
         case 'ice':
             card.style.backgroundColor = '#00BFFF'
-            card.style.backgroundColor = '#87CEFA'
+            header.style.backgroundColor = '#87CEFA'
         break;
         case 'steel':
             card.style.backgroundColor = '#9eb7b8'
-            card.style.backgroundColor = '#B0C4DE'
+            header.style.backgroundColor = '#B0C4DE'
         break;
         case 'dragon':
             card.style.backgroundColor = '#DC143C'
-            card.style.backgroundColor = '#FA8072'
+            header.style.backgroundColor = '#FA8072'
         break;
         case 'dark':
             card.style.backgroundColor = '#707070'
-            card.style.backgroundColor = '#9370DB'
+            header.style.backgroundColor = '#9370DB'
         break;
         case 'flying':
             card.style.backgroundColor = '#4169E1'
-            card.style.backgroundColor = '#6495ED'
+            header.style.backgroundColor = '#6495ED'
         break;
         default:
         card.style.backgroundColor = 'rgba(255, 255, 255, 0.1)' 
