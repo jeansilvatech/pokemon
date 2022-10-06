@@ -17,6 +17,7 @@ body{
 
 header{
     display: flex;
+    flex-direction: column;
     align-items:center;
     justify-content: center;
     text-align: center;
@@ -32,6 +33,10 @@ header .container{
     justify-content: center;
     flex-direction: column;
     
+}
+header p{
+    color: #1c1c1c;
+    font-size: 15px;
 }
 @keyframes header {
     0%{
