@@ -10,9 +10,11 @@
     overflow: hidden;
 }
 body{
+    background: rgba(127, 172, 113, 0.4);
     background-image: url('../img/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 header{
