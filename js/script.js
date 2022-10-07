@@ -98,7 +98,7 @@ function bgCard(typePokemon){
         break;
         case 'flying':
             card.style.backgroundColor = '#4169E1'
-            header.style.background = 'linear-gradient(to bottom, #0575e6, #021b79)'
+            header.style.background = 'linear-gradient(to bottom, #1488cc, #2b32b2)'
         break;
         default:
         card.style.background = 'rgba(255, 255, 255, 0.1)' 
