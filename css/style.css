@@ -23,7 +23,7 @@ header{
     text-align: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     animation: header 5s ease-in-out;
 }
 header .container{
@@ -125,11 +125,12 @@ span{
     padding-bottom: 10px;
     font-weight: 600;
 }
-.container .image{
+.card .image{
     width: 200px;
-    height: 200px; 
-     
+    height: 200px;
+
 }
+
 form input{
     background-color: rgba(255, 255, 255, 0.5);
     color: #1c1c1c;
@@ -139,6 +140,7 @@ form input{
     border-radius: 20px;
     text-align: center;
     border: 1px solid transparent;
+    animation: effectCard 4s ease-in-out;
 }
 input:focus,
 input:active,
