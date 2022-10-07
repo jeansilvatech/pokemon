@@ -158,7 +158,7 @@ input:hover{
     }
     
 }
-@media (max-height:460px) {
+@media (max-height:580px) {
     .container .pokebola{
         width: 70px;
         margin-bottom: 5px;
