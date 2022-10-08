@@ -25,6 +25,8 @@ function getImage(id){
     }else if(id>=100){
         image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
     }
+    image.style.animation = "image 1s ease-in-out";
+    
 }
 function removeAnimationImage(){
     image.style.animation = "";
@@ -113,7 +115,7 @@ const renderPokemon = async(id)=>{
     const typeTwo = await data.types
     namePokemon.innerHTML = data.name;
     getImage(data.id);
-    image.style.animation = "image 1s ease-in-out";
+   
     idPokemon.innerHTML = data.id;
     if(typeTwo.length ===2){
         const typePokemon2 = await data.types[1].type.name
