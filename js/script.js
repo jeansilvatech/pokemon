@@ -26,11 +26,14 @@ function getImage(id){
         image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
     }
 }
+function removeAnimationImage(){
+    image.style.animation = "";
+}
 function bgCard(typePokemon){
     switch(typePokemon){
         case 'grass':
             card.style.backgroundColor = '#3CB371'
-            header.style.background = 'linear-gradient(to bottom, #11998e, #38ef7d)'
+            header.style.background = 'linear-gradient(to bottom, #11998e, #38ef7d)';
         break;
         case 'fire':
             card.style.backgroundColor = '#FFA500'
@@ -110,6 +113,7 @@ const renderPokemon = async(id)=>{
     const typeTwo = await data.types
     namePokemon.innerHTML = data.name;
     getImage(data.id);
+    image.style.animation = "image 1s ease-in-out";
     idPokemon.innerHTML = data.id;
     if(typeTwo.length ===2){
         const typePokemon2 = await data.types[1].type.name
@@ -120,11 +124,15 @@ const renderPokemon = async(id)=>{
     bgCard(typePokemon); 
 }
 
+
+//                           Events
+
 form.addEventListener('submit', (event)=>{
     event.preventDefault();
     renderPokemon(input.value.toLocaleLowerCase());
     console.log(input.value)
     input.value = ''
+    removeAnimationImage();
 })
       
 
@@ -133,12 +141,14 @@ prev.addEventListener('click', ()=>{
             if(id<=0){
                 id=1
             }
-            renderPokemon(id)
+            renderPokemon(id);
+            removeAnimationImage();
         })  
 next.addEventListener('click', ()=>{
             id += 1
             if(id>905){
                 id=905
             }
-            renderPokemon(id)
+            renderPokemon(id);
+            removeAnimationImage();
         })

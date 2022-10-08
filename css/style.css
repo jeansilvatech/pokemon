@@ -131,9 +131,15 @@ span{
 .card .image{
     width: 200px;
     height: 200px;
-
 }
-
+@keyframes image {
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 form input{
     background-color: rgba(255, 255, 255, 0.5);
     color: #1c1c1c;
