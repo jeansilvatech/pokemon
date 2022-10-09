@@ -132,12 +132,26 @@ span{
     width: 200px;
     height: 200px;
 }
+.imageEffect{
+    animation: image 1s ease-in-out;
+}
+.imageEffect2{
+    animation: image2 1s ease-in-out;
+}
 @keyframes image {
     0%{
         transform: scale(1.5);
     }
     100%{
         transform: scale(1);
+    }
+}
+@keyframes image2 {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
     }
 }
 form input{
@@ -158,6 +172,7 @@ input:hover{
     background-color: rgba(255, 255, 255, 0.8);
     color: #1c1c1c;
 }
+
 @media (max-width:480px) {
     .container .pokebola{
         margin-bottom: 25px;
@@ -187,4 +202,17 @@ input:hover{
         width: 250px;
         height: 250px;
     }
+}
+.gg-pokemon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 18px;
+    height: 18px;
+    border: 5px solid transparent;
+    box-shadow:
+        0 0 0 2px,
+        inset 0 0 0 2px;
+    border-radius: 100%
 }

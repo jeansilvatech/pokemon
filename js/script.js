@@ -25,11 +25,11 @@ function getImage(id){
     }else if(id>=100){
         image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
     }
-    image.style.animation = "image 1s ease-in-out";
+    image.classList.add("imageEffect")
     
 }
 function removeAnimationImage(){
-    image.style.animation = "";
+    image.classList.remove("imageEffect")
 }
 function bgCard(typePokemon){
     switch(typePokemon){
@@ -111,19 +111,20 @@ function bgCard(typePokemon){
 }
 const renderPokemon = async(id)=>{
     const data = await pokeApi(id);
+    namePokemon.innerHTML = data.name;
+    idPokemon.innerHTML = data.id;
     const typePokemon = await data.types[0].type.name
     const typeTwo = await data.types
-    namePokemon.innerHTML = data.name;
-    getImage(data.id);
-   
-    idPokemon.innerHTML = data.id;
     if(typeTwo.length ===2){
         const typePokemon2 = await data.types[1].type.name
         span.innerHTML = `${typePokemon.toUpperCase()} | ${typePokemon2.toUpperCase()}`
     }else{
         span.innerHTML = `${typePokemon.toUpperCase()}`
     }
-    bgCard(typePokemon); 
+    getImage(data.id);
+    bgCard(typePokemon);
+    
+    
 }
 
 
@@ -136,6 +137,7 @@ form.addEventListener('submit', (event)=>{
     input.value = ''
     removeAnimationImage();
 })
+
       
 
 prev.addEventListener('click', ()=>{
