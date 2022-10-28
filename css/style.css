@@ -127,6 +127,11 @@ span{
     color: #1c1c1c;
     padding-bottom: 10px;
     font-weight: 600;
+    letter-spacing: 4px;
+    
+}
+.card{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .card .image{
     width: 200px;
@@ -172,7 +177,9 @@ input:hover{
     background-color: rgba(255, 255, 255, 0.8);
     color: #1c1c1c;
 }
-
+.pokebola-card{
+    width: 10px;
+}
 @media (max-width:480px) {
     .container .pokebola{
         margin-bottom: 25px;

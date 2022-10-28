@@ -18,15 +18,19 @@ const pokeApi = async(id)=>{
 }
 
 function getImage(id){
-    if(id<10){
-        image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`
-    }else if(id>=10 && id<100){
-        image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id}.png`
-    }else if(id>=100){
-        image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
-    }
+    setTimeout(()=>{
+        
+        if(id<10){
+            image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`
+        }else if(id>=10 && id<100){
+            image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id}.png`
+        }else if(id>=100){
+            image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
+        }
+        
+    },1000)
+    image.src = "./img/pokebola.png"
     image.classList.add("imageEffect")
-    
 }
 function removeAnimationImage(){
     image.classList.remove("imageEffect")
@@ -117,7 +121,7 @@ const renderPokemon = async(id)=>{
     const typeTwo = await data.types
     if(typeTwo.length ===2){
         const typePokemon2 = await data.types[1].type.name
-        span.innerHTML = `${typePokemon.toUpperCase()} | ${typePokemon2.toUpperCase()}`
+        span.innerHTML = `${typePokemon.toUpperCase()} - ${typePokemon2.toUpperCase()}`
     }else{
         span.innerHTML = `${typePokemon.toUpperCase()}`
     }
