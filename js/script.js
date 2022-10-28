@@ -34,6 +34,9 @@ function getImage(id){
 }
 function removeAnimationImage(){
     image.classList.remove("imageEffect")
+    namePokemon.classList.remove('textEffect')
+    span.classList.remove('textOpacity')
+    idPokemon.classList.remove('textEffect')
 }
 function bgCard(typePokemon){
     switch(typePokemon){
@@ -116,6 +119,9 @@ function bgCard(typePokemon){
 const renderPokemon = async(id)=>{
     const data = await pokeApi(id);
     namePokemon.innerHTML = data.name;
+    namePokemon.classList.add('textEffect')
+    span.classList.add('textOpacity')
+    idPokemon.classList.add('textEffect')
     idPokemon.innerHTML = data.id;
     const typePokemon = await data.types[0].type.name
     const typeTwo = await data.types
