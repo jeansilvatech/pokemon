@@ -146,9 +146,12 @@ span{
 @keyframes image {
     0%{
         transform: scale(1.5);
+        opacity: 0;
+       
     }
     100%{
         transform: scale(1);
+        opacity: 1;
     }
 }
 @keyframes image2 {
