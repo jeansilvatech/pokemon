@@ -27,6 +27,7 @@ header{
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     animation: header 5s ease-in-out;
+    backdrop-filter: blur(10px);
     
 }
 header .container{
@@ -123,6 +124,29 @@ header p{
     background-color: rgba(255,255,255, 0.5);
     color: #1c1c1c;
 }
+.container .poke-error{
+    display: none;
+    color: #C0C0C0;
+    font-size: 15px;
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    animation: pokeError .5s ease-in-out;
+    z-index: -1;
+    transition: 500ms;
+}
+
+@keyframes pokeError {
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+
 span{
     color: #1c1c1c;
     padding-bottom: 10px;
@@ -176,7 +200,7 @@ span{
 form input{
     background-color: rgba(255, 255, 255, 0.5);
     color: #1c1c1c;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     width: 300px;
     height: 50px;
     border-radius: 20px;

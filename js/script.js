@@ -8,13 +8,16 @@ const span = document.querySelector('span');
 const card = document.querySelector('.card');
 const input = document.querySelector('input');
 const header = document.querySelector('header');
+const pokeError = document.querySelector('.poke-error')
 const url = 'https://pokeapi.co/api/v2/pokemon-form/'
 let id = 0
 
 const pokeApi = async(id)=>{
-    const pokeResponse = await  fetch(`${url}${id}`);
-    const data = await pokeResponse.json();
-    return data;
+
+        const pokeResponse = await  fetch(`${url}${id}`);
+        const data = await pokeResponse.json();
+        return data;
+   
 }
 
 function getImage(id){
@@ -117,24 +120,36 @@ function bgCard(typePokemon){
     }
 }
 const renderPokemon = async(id)=>{
-    const data = await pokeApi(id);
-    namePokemon.innerHTML = data.name;
-    namePokemon.classList.add('textEffect')
-    span.classList.add('textOpacity')
-    idPokemon.classList.add('textEffect')
-    idPokemon.innerHTML = data.id;
-    const typePokemon = await data.types[0].type.name
-    const typeTwo = await data.types
-    if(typeTwo.length ===2){
-        const typePokemon2 = await data.types[1].type.name
-        span.innerHTML = `${typePokemon.toUpperCase()} - ${typePokemon2.toUpperCase()}`
-    }else{
-        span.innerHTML = `${typePokemon.toUpperCase()}`
+    try{
+        const data = await pokeApi(id);
+        namePokemon.innerText = data.name;
+        namePokemon.classList.add('textEffect')
+        span.classList.add('textOpacity')
+        idPokemon.classList.add('textEffect')
+        idPokemon.innerText = data.id;
+        const typePokemon = await data.types[0].type.name
+        const typeTwo = await data.types
+        if(typeTwo.length ===2){
+            const typePokemon2 = await data.types[1].type.name
+            span.innerText = `${typePokemon.toUpperCase()} - ${typePokemon2.toUpperCase()}`
+        }else{
+            span.innerText = `${typePokemon.toUpperCase()}`
+        }
+        getImage(data.id);
+        bgCard(typePokemon);
     }
-    getImage(data.id);
-    bgCard(typePokemon);
-    
-    
+    catch{
+        pokeError.innerText = `Pokémon não encontrado!`
+        pokeError.style.display = 'block'
+        pokeError.style.backgroundColor = '#8B0000'
+        input.disabled =true
+        setTimeout(()=>{
+            pokeError.innerText = `Tente novamente!`
+            pokeError.style.display = 'none'
+            input.disabled =false
+        },5000)
+        
+    }
 }
 
 
