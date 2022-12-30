@@ -218,6 +218,14 @@ input:hover{
 .pokebola-card{
     width: 10px;
 }
+#github{
+    text-decoration: none;
+    font-weight: 900;
+    color: #1c1c1c;
+    padding: 5px;
+    border-radius: 10px;
+
+}
 @media (max-width:480px) {
     .container .pokebola{
         margin-bottom: 25px;
