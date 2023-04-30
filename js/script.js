@@ -139,14 +139,17 @@ const renderPokemon = async(id)=>{
         bgCard(typePokemon);
     }
     catch{
-        pokeError.innerText = `Pokémon não encontrado!`
+        pokeError.innerHTML = "Pokémon não encontrado!"
         pokeError.style.display = 'block'
         pokeError.style.backgroundColor = '#8B0000'
         input.disabled =true
-        setTimeout(()=>{
-            pokeError.innerText = `Tente novamente!`
-            pokeError.style.display = 'none'
-            input.disabled =false
+        setInterval(()=>{
+            pokeError.innerHTML = "Tente novamente!"
+            setInterval(() => {
+                pokeError.style.display = 'none'
+                input.disabled =false
+            }, 3000);
+            
         },5000)
         
     }
