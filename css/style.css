@@ -26,9 +26,9 @@ header{
     text-align: center;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     animation: header 5s ease-in-out;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     
 }
 header .container{
@@ -48,7 +48,7 @@ header p{
         background-color: rgba(255, 255, 255, 1);
     }
     100%{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 }
 .container .pokebola{
@@ -78,7 +78,7 @@ header p{
     width: 150px;
     border: transparent;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
     color: #1c1c1c;
     font-size: 20px;
     font-weight: 700;
@@ -88,7 +88,7 @@ header p{
 }
 
 .container button:hover{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 1);
     color: #1c1c1c;
 }
 @keyframes effect {
