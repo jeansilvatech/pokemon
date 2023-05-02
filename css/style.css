@@ -160,6 +160,11 @@ span{
     height: 200px;
     filter: drop-shadow(0 0 0.2rem #1c1c1c);
 }
+.card span{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .imageEffect{
     animation: image 1s ease-in-out;
 }
