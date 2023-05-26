@@ -1,6 +1,6 @@
 # Pokémon
-## Projeto de listagem de pokémons consumindo Poke API, desenvolvido do zero com objetivo de desenvolver habilidades em CSS, JavaScript e consumo de API.
-### *Em breve melhorias
+### Projeto de listagem de pokémons consumindo Poke API, desenvolvido do zero com objetivo de desenvolver habilidades em CSS, JavaScript e consumo de API.
+#### *Em breve melhorias
 
 ## Tecnologias utilizadas
 - HTML
