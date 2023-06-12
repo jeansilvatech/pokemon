@@ -145,26 +145,39 @@ header p{
     
 }
 
-span{
-    color: #1c1c1c;
-    padding-bottom: 10px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    
-}
 .card{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .card .image{
-    width: 200px;
-    height: 200px;
+    width: 205px;
+    height: 205px;
+    object-fit: contain;
     filter: drop-shadow(0 0 0.2rem #1c1c1c);
+    cursor: pointer;
 }
-.card span{
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+.card .image:hover{
+    scale: 1.4;
 }
 
+.card .image:hover~ .pokemon-type{
+    background-color: rgba(255, 255, 255, 1);
+    transition: 500ms;
+}
+/* .card .image:hover~ .pokemon-id{
+    font-size: 11px;
+} */
+.card span{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #1c1c1c;
+    padding-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.card .pokemon-name{
+    letter-spacing: 4px;
+    font-weight: 500;
+}
 .imageEffect{
     animation: image 1s ease-in-out;
 }
@@ -203,7 +216,7 @@ span{
 }
 form input{
     background-color: rgba(255, 255, 255, 0.5);
-    color: #1c1c1c;
+    color: #fff;
     margin-bottom: 5px;
     width: 300px;
     height: 50px;
@@ -223,7 +236,7 @@ input:hover{
     width: 10px;
 }
 #footer{
-    font-size: 13px;
+    font-size: 11px;
     color: #1c1c1c;
 }
 #github{
