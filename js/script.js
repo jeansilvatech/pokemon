@@ -9,6 +9,7 @@ const card = document.querySelector('.card');
 const input = document.querySelector('input');
 const header = document.querySelector('header');
 const pokeError = document.querySelector('.poke-error')
+const btnSearch = document.querySelector('.search')
 const url = 'https://pokeapi.co/api/v2/pokemon-form/'
 let id = 0
 
@@ -161,11 +162,15 @@ const renderPokemon = async(id)=>{
 form.addEventListener('submit', (event)=>{
     event.preventDefault();
     renderPokemon(input.value.toLocaleLowerCase());
-    console.log(input.value)
     input.value = ''
     removeAnimationImage();
 })
-
+btnSearch.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    renderPokemon(input.value.toLocaleLowerCase());
+    input.value = ''
+    removeAnimationImage();
+})
       
 
 prev.addEventListener('click', ()=>{
@@ -184,3 +189,7 @@ next.addEventListener('click', ()=>{
             renderPokemon(id);
             removeAnimationImage();
         })
+
+       
+
+  

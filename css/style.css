@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: rgb(192, 192, 192);
-    transition: 900ms;
+    transition: 500ms;
     overflow: hidden;
 }
 body{
@@ -32,7 +32,8 @@ header{
     
 }
 header .container{
-    width: 700px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -56,6 +57,7 @@ header p{
     margin-bottom: 50px;
     animation: effect 4s ease-in-out;
 }
+
 .container .logo{
     width: 200px;
     margin-bottom: 10px;
@@ -72,12 +74,19 @@ header p{
     border-radius: 20px;
     animation:effectCard 4s ease-in-out;
 }
-
-.container button{
+.container .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 150px;
-    border: transparent;
-    border-radius: 20px;
+    border: none;
+   
     background-color: rgba(255, 255, 255, 0.5);
     color: #1c1c1c;
     font-size: 20px;
@@ -86,7 +95,15 @@ header p{
     cursor: pointer;
     animation: effectCard 4s ease-in-out;
 }
-
+.buttons .prev{
+    border-radius: 20px 0 0 20px;
+}
+.buttons .next{
+    border-radius: 0 20px 20px 0;
+}
+.buttons button i{
+    color: #1c1c1c;
+}
 .container button:hover{
     background-color: rgba(255, 255, 255, 1);
     color: #1c1c1c;
@@ -144,7 +161,6 @@ header p{
     }
     
 }
-
 .card{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -163,9 +179,7 @@ header p{
     background-color: rgba(255, 255, 255, 1);
     transition: 500ms;
 }
-/* .card .image:hover~ .pokemon-id{
-    font-size: 11px;
-} */
+
 .card span{
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
@@ -214,16 +228,37 @@ header p{
         transform: scale(1);
     }
 }
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 form input{
     background-color: rgba(255, 255, 255, 0.5);
     color: #fff;
     margin-bottom: 5px;
-    width: 300px;
+    width: 250px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     text-align: center;
     border: 1px solid transparent;
     animation: effectCard 4s ease-in-out;
+}
+form .search{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+    cursor: pointer;
+    animation: effectCard 4s ease-in-out;
+}
+.search i{
+    color: #1c1c1c;
 }
 input:focus,
 input:active,
@@ -237,6 +272,7 @@ input:hover{
 }
 #footer{
     font-size: 11px;
+    padding: 10px;
     color: #1c1c1c;
 }
 #github{
