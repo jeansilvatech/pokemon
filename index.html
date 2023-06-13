@@ -12,18 +12,22 @@
 </head>
 
 <body>
-    <header>
+    <div class="bg">
+        
+    </div>
+    <main>
         <div class="container">
             <img class="logo" src="./img/logo.png" alt="">
             <img class="pokebola" src="./img/pokebola.png" alt="">
             <form action="">
                 <input type="text" placeholder="Pesquise pelo ID ou Nome">
-                <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="search" title="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <p class="poke-error"></p>
             <div class="buttons">
-                <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="prev" title="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="navigation">Navegar</div>
+                <button class="next" title="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
             <div id="card" class="card pokemon-card"> 
                 <h1 class="pokemon-name">Nome</h1>
@@ -34,7 +38,7 @@
 
         </div>
         <p id="footer">developed by <a target="_blank" id="github" href="https://github.com/jeansilvatech">Jean Silva</a></p>
-    </header>
+    </main>
     <script src="./js/script.js"></script>
        
 </body>

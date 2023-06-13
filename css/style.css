@@ -11,27 +11,47 @@
 }
 body{
     background: rgba(127, 172, 113, 0.5);
-    background-image: url('../img/background.jpg');
+    /* background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    height: 100vh;
+}
+.bg{
+     background-image: url('../img/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
+    inset: 0;
+    width: 100vw;
     height: 100vh;
+    animation: bgScale 15s infinite;
 }
 
-header{
+@keyframes bgScale{
+    0%,100%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.5;
+    }
+    
+}
+main{
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    animation: header 5s ease-in-out;
+    animation: main 5s ease-in-out;
     backdrop-filter: blur(2px);
     
 }
-header .container{
+main .container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -40,11 +60,11 @@ header .container{
     flex-direction: column;
     
 }
-header p{
+main p{
     color: #1c1c1c;
     font-size: 15px;
 }
-@keyframes header {
+@keyframes main {
     0%{
         background-color: rgba(255, 255, 255, 1);
     }
@@ -52,16 +72,31 @@ header p{
         background-color: rgba(0, 0, 0, 0.2);
     }
 }
+.pokebola,
+.logo{
+    filter: drop-shadow(0 0 0.2rem #1c1c1c);
+}
 .container .pokebola{
     width: 100px;
     margin-bottom: 50px;
     animation: effect 4s ease-in-out;
 }
-
+.pokebola:hover{
+    scale: 1.1;
+}
+@keyframes pokebola {
+    0%{
+        rotate: 180deg;
+    }
+    50%{
+        rotate: 0;
+    }
+    
+}
 .container .logo{
     width: 200px;
     margin-bottom: 10px;
-    animation: effect 4s ease-in-out;
+    animation: effect 2s ease-in-out;
 }
 .container .card{
     display: flex;
@@ -72,7 +107,7 @@ header p{
     height: 300px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    animation:effectCard 4s ease-in-out;
+    animation:effectCard 2s ease-in-out;
 }
 .container .buttons{
     display: flex;
@@ -84,22 +119,33 @@ header p{
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 150px;
+    width: 50px;
     border: none;
-   
     background-color: rgba(255, 255, 255, 0.5);
     color: #1c1c1c;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-    animation: effectCard 4s ease-in-out;
+    animation: effectCard 2s ease-in-out;
 }
 .buttons .prev{
     border-radius: 20px 0 0 20px;
 }
 .buttons .next{
     border-radius: 0 20px 20px 0;
+}
+
+.buttons .navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    color: #1c1c1c;
+    background-color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    font-weight: 400;
 }
 .buttons button i{
     color: #1c1c1c;
@@ -157,13 +203,17 @@ header p{
 
 @keyframes pokeError {
     0%{
-        opacity: 0;
+        transform: scale(0.8);
     }
     
 }
 .card{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 .card .image{
     width: 205px;
     height: 205px;
@@ -242,7 +292,7 @@ form input{
     border-radius: 20px 0 0 20px;
     text-align: center;
     border: 1px solid transparent;
-    animation: effectCard 4s ease-in-out;
+    animation: effectCard 2s ease-in-out;
 }
 form .search{
     width: 50px;
@@ -255,8 +305,9 @@ form .search{
     background-color: rgba(255, 255, 255, 0.7);
     margin-bottom: 5px;
     cursor: pointer;
-    animation: effectCard 4s ease-in-out;
+    animation: effectCard 2s ease-in-out;
 }
+
 .search i{
     color: #1c1c1c;
 }
@@ -264,7 +315,7 @@ input:focus,
 input:active,
 input:hover{
     outline: none;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     color: #1c1c1c;
 }
 .pokebola-card{
