@@ -9,14 +9,9 @@
     transition: 500ms;
     overflow: hidden;
 }
-body{
+/* body{
     background: rgba(127, 172, 113, 0.5);
-    /* background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-    height: 100vh;
-}
+} */
 .bg{
      background-image: url('../img/background.jpg');
     background-size: cover;
@@ -44,8 +39,8 @@ main{
     align-items:center;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.2);
     animation: main 5s ease-in-out;
     backdrop-filter: blur(2px);
@@ -334,11 +329,13 @@ input:hover{
     border-radius: 10px;
 
 }
-@media (max-width:480px) {
+@media (max-width:600px) {
     .container .pokebola{
         margin-bottom: 25px;
     }
-    
+    .bg{
+        animation: none;
+    }
 }
 @media (max-height:580px) {
     .container .pokebola{
