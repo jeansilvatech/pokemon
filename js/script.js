@@ -158,7 +158,7 @@ const renderPokemon = async(id)=>{
             const typeTwo = await data.types
             if(typeTwo.length ===2){
                 const typePokemon2 = await data.types[1].type.name
-                span.innerText = `${typePokemon.toUpperCase()} - ${typePokemon2.toUpperCase()}`
+                span.innerText = `${typePokemon.toUpperCase()} | ${typePokemon2.toUpperCase()}`
             }else{
                 span.innerText = `${typePokemon.toUpperCase()}`
             }
