@@ -96,7 +96,7 @@ function bgCard(typePokemon){
         break;
         case 'electric':
             card.style.backgroundColor = '#FFD700'
-            main.style.backgroundImage = 'linear-gradient(to bottom, #ffe000, #1c1c1c)'
+            main.style.backgroundImage = 'linear-gradient(to bottom, #f7971e, #ffd200)'
         break;
         case 'ground':
             card.style.backgroundColor = '#F0E68C'
