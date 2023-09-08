@@ -20,19 +20,19 @@ const pokeApi = async(id)=>{
    
 }
 
-function getImage(id){
-    setTimeout(()=>{
+const getImage = (id)=>{
+    setTimeout( async()=>{
         
         if(id<10){
-            image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`
+            image.setAttribute('src', `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`)
         }else if(id>=10 && id<100){
-            image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id}.png`
+            image.setAttribute('src', `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id}.png`)
         }else if(id>=100){
-            image.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
+            image.setAttribute('src', `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`)
         }
         
     },1000)
-    image.src = "./img/pokebola.png"
+    image.setAttribute('src', './img/pokebola.png')
     image.classList.add("imageEffect")
 }
 function removeAnimationImage(){
@@ -62,13 +62,13 @@ function NotRender(){
             namePokemon.innerText = 'Nome'
             idPokemon.innerText = 'Nº'
             span.innerText = 'Tipo'
-            image.src = "./img/shadow.png"
+            image.setAttribute('src', "./img/shadow.png")
             main.style.backgroundImage = "./img/background.jpg"
             card.style.backgroundColor = ''
             main.style.background = ''
 
 }
-function bgCard(typePokemon){
+const  bgCard = (typePokemon)=>{
     switch(typePokemon){
         case 'grass':
             card.style.backgroundColor = '#3CB371'
@@ -217,5 +217,3 @@ next.addEventListener('click', ()=>{
         })
 
        
-
-        console.log(input.value)
