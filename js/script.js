@@ -155,15 +155,15 @@ const renderPokemon = async(id)=>{
             idPokemon.classList.add('textEffect')
             idPokemon.innerText = data.id;
             const typePokemon = await data.types[0].type.name
-            const typeTwo = await data.types
+            const typeTwo = await data.types;
+            getImage(data.id);
+            bgCard(typePokemon);
             if(typeTwo.length ===2){
                 const typePokemon2 = await data.types[1].type.name
                 span.innerText = `${typePokemon.toUpperCase()} | ${typePokemon2.toUpperCase()}`
             }else{
                 span.innerText = `${typePokemon.toUpperCase()}`
-            }
-            getImage(data.id);
-            bgCard(typePokemon);
+            }      
           
     }
     catch{
