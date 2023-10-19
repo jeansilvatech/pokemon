@@ -20,8 +20,8 @@ const pokeApi = async(id)=>{
    
 }
 
-const getImage = (id)=>{
-    setTimeout( async()=>{
+const getImage = async(id)=>{
+    setTimeout(()=>{
         
         if(id<10){
             image.setAttribute('src', `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`)
