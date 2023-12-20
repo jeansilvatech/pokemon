@@ -18,7 +18,8 @@
 ![image](https://user-images.githubusercontent.com/23384348/194585311-823f37f6-ed93-4dc0-a8a7-0c546d4df271.png)
 ![image](https://user-images.githubusercontent.com/23384348/194585437-b1a608f7-90a1-4b54-9f2a-4cc01a437691.png)
 ![image](https://user-images.githubusercontent.com/23384348/194585632-6daf7bbd-54a9-4a76-a0ea-c93e44e6a6b7.png)
-![image](https://user-images.githubusercontent.com/23384348/194585754-6c7bc932-a135-49d3-a761-e7ecc84f95f0.png)
+![image](https://github.com/jeansilvatech/pokemon/assets/23384348/09a085ed-99a2-46ce-b4d9-1423175d6a2d)
+
 
 
 
