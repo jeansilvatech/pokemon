@@ -116,7 +116,7 @@ main p{
     height: 50px;
     width: 50px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: rgba(239,64,54, 1);
     color: #1c1c1c;
     font-size: 20px;
     font-weight: 700;
@@ -300,7 +300,7 @@ form .search{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);
+    background: rgba(239,64,54, 1);
     margin-bottom: 5px;
     cursor: pointer;
     animation: effectCard 2s ease-in-out;
@@ -335,17 +335,29 @@ input:hover{
 .pokebola-card{
     width: 10px;
 }
-#footer{
+footer{
     font-size: 11px;
-    padding: 10px;
-    color: #ffffff;
+    height: 30px;
+    color: #1c1c1c;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+footer span{
+    color: #1c1c1c;
+    width: 50%;
 }
 #github{
     text-decoration: none;
     font-weight: 600;
-    color: #ffffff;
+    color: #ffff;
     padding: 5px;
-    border-radius: 10px;
+    background: rgba(239,64,54, 1);
+    width: 50%;
+    height: 100%;
 
 }
 @media (max-width:600px) {
