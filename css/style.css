@@ -13,7 +13,7 @@
     background: rgba(127, 172, 113, 0.5);
 } */
 .bg{
-     background-image: url('../img/background.jpg');
+     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
     inset: 0;
     width: 100vw;
     height: 100vh;
-    animation: bgScale 15s infinite;
+    /* animation: bgScale 15s infinite; */
 }
 
 @keyframes bgScale{
@@ -41,9 +41,9 @@ main{
     text-align: center;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, .7);
     animation: main 5s ease-in-out;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(0px);
     
 }
 main .container{
@@ -61,10 +61,10 @@ main p{
 }
 @keyframes main {
     0%{
-        background-color: rgba(255, 255, 255, 1);
+        background: rgba(255, 255, 255, 1);
     }
     100%{
-        background-color: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, .7);
     }
 }
 .pokebola,
@@ -100,7 +100,7 @@ main p{
     margin: 5px 15px;
     width: 300px;
     height: 300px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 20px;
     animation:effectCard 2s ease-in-out;
 }
@@ -172,7 +172,7 @@ main p{
     font-size: 20px;
     width: 100%;
     padding: 18px;
-    background-color: rgba(255,0,0, 0.5);
+    background-color: rgba(0,0,0, 0.5);
 }
 .container h2{
     width: 100%;
